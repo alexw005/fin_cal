@@ -5,15 +5,15 @@ out_dir = "docs"
 default_platform = "web"
 
 [web.app]
-base_path = "fin_cal"
+base_path = "."
 
 [web.watcher]
 
 # when watcher trigger, regenerate the `index.html`
-reload_html = true
+# reload_html = true
 
 # which files or dirs will be watcher monitoring
-watch_path = ["src", "public"]
+# watch_path = ["src", "public"]
 
 [web.resource]
 # CSS style file
