@@ -5,7 +5,9 @@ out_dir = "docs"
 default_platform = "web"
 
 [web.app]
-base_path = "."
+base_path = "fin_cal"
+title = "Financial calculator"
+
 
 [web.watcher]
 
