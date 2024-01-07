@@ -1,0 +1,31 @@
+[application]
+# ...
+name = "fin_cal"
+out_dir = "docs"
+default_platform = "web"
+
+[web.app]
+base_path = "fin_cal"
+
+[web.watcher]
+
+# when watcher trigger, regenerate the `index.html`
+reload_html = true
+
+# which files or dirs will be watcher monitoring
+watch_path = ["src", "public"]
+
+[web.resource]
+# CSS style file
+# style = ["tailwind.css"]
+
+style = []
+[web.resource.dev]
+
+# serve: [dev-server] only
+
+# CSS style file
+style = []
+
+# Javascript code file
+script = []
