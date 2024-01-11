@@ -15,5 +15,8 @@ pub fn InputNumber(cx:Scope,input:InputProps) -> Element {
             position: "relative",
             "{number}"
         }
+        div{
+            "{number}"
+        }
     })
 }

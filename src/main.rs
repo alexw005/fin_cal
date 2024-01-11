@@ -2,6 +2,7 @@
 // import the prelude to get access to the `rsx!` macro and the `Scope` and `Element` types
 use dioxus::prelude::*;
 use crate::components::story_listing::StoryItem;
+use crate::components::input_number::InputProps;
 fn main() {
     // launch the web app
     dioxus_web::launch(App);
@@ -29,6 +30,11 @@ fn App(cx: Scope) -> Element {
                 descendants: 0,
                 kids: vec![],
                 r#type: "".to_string(),
+            }
+        }
+        components::input_number:: InputNumber {
+            input: InputProps {
+                number: number,
             }
         }
     })
