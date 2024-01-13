@@ -19,15 +19,14 @@ title = "Financial calculator"
 
 [web.resource]
 # CSS style file
-# style = ["tailwind.css"]
+style = ["tailwind.css"]
 
-style = []
 [web.resource.dev]
 
 # serve: [dev-server] only
 
 # CSS style file
-style = []
+style = ["tailwind.css"]
 
 # Javascript code file
 script = []

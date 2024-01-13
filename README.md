@@ -11,3 +11,11 @@
   `dx build --release`
 
 - wait for github action to deploy the page for you, Enjoy!
+
+## Tailwindcss
+
+- install tailwind https://tailwindcss.com/docs/installation
+
+`npx tailwindcss -i ./input.css -o ./docs/tailwind.css --watch`
+
+`cargo watch -x 'run --release'`
