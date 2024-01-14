@@ -31,7 +31,7 @@ fn App(cx: Scope) -> Element {
         let interest_rate=data.get("interest_rate").clone().unwrap()[0].parse::<f32>().unwrap()/100.0;
         let loan_term=data.get("loan_term").clone().unwrap()[0].parse::<f32>().unwrap();
         let yearly_payments=12.0;
-        let extra_payment=data.get("extra_payment").clone().unwrap()[0].parse::<f32>().unwrap();
+        // let extra_payment=data.get("extra_payment").clone().unwrap()[0].parse::<f32>().unwrap();
 
         let monthly_interest_rate:f32=interest_rate/yearly_payments;
         let total_payments_number:f32=loan_term*yearly_payments;
