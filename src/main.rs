@@ -73,22 +73,16 @@ fn App(cx: Scope) -> Element {
                     class:"border-2 border-blue-500 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none",
                     name:"loan_term",placeholder:"Loan term in years, ie: 30",
                 },
+                // label{
+                //     "Extra payment"
+                // },
                 // input{ 
                 //     r#type: "number",
+                //     initial_value:"0",
                 //     min:"0",
                 //     class:"border-2 border-blue-500 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none",
-                //     name:"yearly_payments",placeholder:"yearly_payments",
+                //     name:"extra_payment",placeholder:"extra_payment",
                 // },
-                label{
-                    "Extra payment"
-                },
-                input{ 
-                    r#type: "number",
-                    initial_value:"0",
-                    min:"0",
-                    class:"border-2 border-blue-500 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none",
-                    name:"extra_payment",placeholder:"extra_payment",
-                },
                 input { class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
                 r#type: "submit", },
             }
