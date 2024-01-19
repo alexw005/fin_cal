@@ -42,7 +42,7 @@ fn App(cx: Scope) -> Element {
     }
     cx.render(rsx! {
         div{
-            class:"text-center space-y-2",
+            class:"h-screen bg-blue-300 text-center space-y-2 items-center flex justify-center flex-col",
             h1 {
                 class:"text-lg text-black font-semibold",
                 "Financial loan calculator"
@@ -56,22 +56,25 @@ fn App(cx: Scope) -> Element {
                 input{
                     r#type: "number",
                     min:"0",
-                    class:"border-2 border-blue-500 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none",
+                    class:"appearance-none border-2 border-purple-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500",
                     placeholder:"Loan ammount, ie: 100000",
                     name: "loan_total",
+                    required: true,
                 },
                 input{ 
                     r#type: "number",
                     min:"0",
                     step:"0.01",
-                    class:"border-2 border-blue-500 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none",
+                    class:"appearance-none border-2 border-purple-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500",
                     name:"interest_rate",placeholder:"Interest Rate, ie: 5.5 for 5.5%",
+                    required: true,
                 },
                 input{ 
                     r#type: "number",
                     min:"0",
-                    class:"border-2 border-blue-500 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none",
+                    class:"appearance-none border-2 border-purple-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500",
                     name:"loan_term",placeholder:"Loan term in years, ie: 30",
+                    required: true,
                 },
                 // label{
                 //     "Extra payment"
