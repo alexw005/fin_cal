@@ -1,13 +1,11 @@
 #![allow(non_snake_case)]
-use chrono::format::Numeric;
 use dioxus::html::{EventData, label};
-// import the prelude to get access to the `rsx!` macro and the `Scope` and `Element` types
 use dioxus::prelude::*;
 use im_rc::HashMap;
 
 // use crate::components::story_listing::StoryItem;
 
-use log::{debug, warn,info};
+use log::{info};
 fn main() {
     // launch the web app
     wasm_logger::init(wasm_logger::Config::default());
@@ -18,12 +16,9 @@ mod components{
     pub mod input_number;
     pub mod fancy_button;
 }
-// create a component that renders a div with the text "Hello, world!""
 
 fn App(cx: Scope) -> Element {
-    // let form_input = use_state(cx, HashMap::new);
     let ammount =use_state(cx, String::new);
-    let draft = use_state(cx, String::new);
     fn calculator(e: HashMap<String,Vec<String>>) -> String{
         let data = e;
         info!("{:?}", data.get("loan_total"));
@@ -50,9 +45,7 @@ fn App(cx: Scope) -> Element {
             form{
                 class:"text-center space-y-2 sm:text-left flex flex-col items-center",
                 onsubmit: move |event| 
-                    // info!("{:?}",event.data.values.clone()),
-                        // form_input.set(event.data.values.clone().into()),
-                        ammount.set(calculator(event.data.values.clone().into())),        
+                    ammount.set(calculator(event.data.values.clone().into())),        
                 input{
                     r#type: "number",
                     min:"0",
